@@ -1,0 +1,57 @@
+@import 'tailwindcss/dist/base.css';
+@import 'tailwindcss/dist/components.css';
+@import 'tailwindcss/dist/utilities.css';
+
+#app{
+    width: 75vw;
+    height: 900px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    margin-left: 12% ;
+}
+
+.container:hover{
+    width: 100%;
+    height: 100%;
+}
+.container:hover{
+    background-color: papayawhip;
+}
+
+.img{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    left: calc( 70% - 200px);
+    margin-top: 20px;
+    border-radius: 50px;
+}
+.title{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.price{
+    font-size: 0.6;
+    text-align: center;
+}
+
+@media (max-width: 768px){
+    #app{
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .img{
+        left: calc(80% - 200px);
+    }
+}
+
+@media (max-width: 425px){
+    #app{
+        grid-template-columns: repeat(1, 1fr); 
+    }
+    .img{
+        left: calc(80% - 200px);
+    }
+}
